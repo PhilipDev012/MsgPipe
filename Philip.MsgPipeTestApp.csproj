@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <BaseOutputPath></BaseOutputPath>
+    <StartupObject>Philip.MsgPipeTestApp.App</StartupObject>
+    <Description>My version of a message pipeline that allows a developer to send messages from one part of an application to any other part.  Written in .NET C#</Description>
+    <Copyright>(c)2024 Philip Chapman</Copyright>
+    <PackageIcon></PackageIcon>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+    <Title>MsgPipe</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AppIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AppIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AppIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MsgPipe\App-Specific Messages\Notify_CounterStarted_PArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\App-Specific Messages\Notify_CounterFinished_PArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\Library Classes\General\IMPHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\Library Classes\General\MessagingController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\Library Classes\General\MsgPipeWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\Library Classes\Message Pipeline\_Notify_PArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\Library Classes\Message Pipeline\_PArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MsgPipe\App-Specific Messages\Notify_CounterChanged_PArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AppIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
