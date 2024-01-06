@@ -1,1 +1,1 @@
-Please read the file named "ReadMe.odt" for details on how to use this code.
+Please read the file named "ReadMe.odt" in the documentation folder for details on how to use this code.
